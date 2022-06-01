@@ -48,9 +48,14 @@ function playSound(key) {
       snare.play();
       break;
 
-    case 'x':
+    case 'n':
       var crash = new Audio("sounds/crash.mp3");
       crash.play();
+      break;
+
+    case 'x':
+      var hiHat = new Audio("sounds/Hi-Hat-Closed.mp3");
+      hiHat.play();
       break;
 
     case 'b':

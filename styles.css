@@ -37,6 +37,11 @@ footer {
 }
 
 .x {
+  background-image: url("images/hi-hat.png");
+  background-size: 150%;
+}
+
+.n {
   background-image: url("images/crash.png");
 }
 
