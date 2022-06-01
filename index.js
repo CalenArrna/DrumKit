@@ -2,13 +2,24 @@ document.querySelectorAll("button").forEach((item, i) => {
   item.addEventListener("click", function() {
     var button = this.innerHTML;
     playSound(button);
-
+    buttonAnimation(button);
   });
 });
 
 document.addEventListener("keydown", function(event) {
   playSound(event.key);
+  buttonAnimation(event.key);
 })
+
+
+function buttonAnimation(currentKey) {
+    var pressedButton = document.querySelector("." + currentKey);
+
+    pressedButton.classList.add("pressed");
+
+    setTimeout(function () {pressedButton.classList.remove("pressed");},
+     100);
+}
 
 function playSound(key) {
   switch (key) {
